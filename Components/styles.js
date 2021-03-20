@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 
+
 export const Colors = {
   dark: 'black',
   light: 'white',
@@ -18,9 +19,9 @@ const lightStyleSheet = StyleSheet.create({
   box: {
     justifyContent: "center",
     alignItems: 'center',
-    borderWidth: 2,
-    height: 150,
-    width: 150,
+    borderWidth: 1,
+    height: 75,
+    width: 100,
     borderColor: Colors.dark,
   },
 });
@@ -35,9 +36,9 @@ const darkStyleSheet = StyleSheet.create({
   box: {
     justifyContent: "center",
     alignItems: 'center',
-    borderWidth: 2,
-    height: 150,
-    width: 150,
+    borderWidth: 1,
+    height: 75,
+    width: 100,
     borderColor: Colors.light,
   },
 });
@@ -52,9 +53,9 @@ const halloweenStyleSheet = StyleSheet.create({
   box: {
     justifyContent: "center",
     alignItems: 'center',
-    borderWidth: 2,
-    height: 150,
-    width: 150,
+    borderWidth: 1,
+    height: 75,
+    width: 100,
     borderColor: Colors.dark,
   },
 });
@@ -69,9 +70,9 @@ const sunshineStyleSheet = StyleSheet.create({
   box: {
     justifyContent: "center",
     alignItems: 'center',
-    borderWidth: 2,
-    height: 150,
-    width: 150,
+    borderWidth: 1,
+    height: 75,
+    width: 100,
     borderColor: Colors.halloween,
   },
 });
@@ -87,18 +88,27 @@ const pattyStyleSheet = StyleSheet.create({
   box: {
     justifyContent: "center",
     alignItems: 'center',
-    borderWidth: 2,
-    height: 150,
-    width: 150,
+    borderWidth: 1,
+    height: 75,
+    width: 100,
     borderColor: Colors.light,
   },
 });
 
 
 
-export default function getStyleSheet(Button.title){
-  return   condition1 ? value1
-         : condition2 ? value2
-         : condition3 ? value3
-         : value4;
+export default function getStyleSheet(theTheme){
+  console.log("From stylesheet: the state: " + theTheme);
+  if (theTheme == "HalloweenTheme") {      
+      return halloweenStyleSheet }
+  else if (theTheme == "PattyTheme") { 
+      return pattyStyleSheet}
+  else if (theTheme == "DarkTheme") {
+    return darkStyleSheet } 
+  else if (theTheme == "SunshineTheme"){
+    return sunshineStyleSheet}
+  else if (theTheme == "LightTheme")
+  { return lightStyleSheet}
+  else 
+  return lightStyleSheet
 };
