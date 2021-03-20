@@ -19,22 +19,22 @@ export default class App extends Component {
     <>
     <View style={styles.container}>
       <View style={styles.box}>
-        <Button title="dark" onPress={() => {this.setState({Theme: "DarkTheme"}); console.log(this.state);}} />
+        <Button color="#715aa9" title="dark" onPress={() => {this.setState({Theme: "DarkTheme"}); console.log(this.state);}} />
       </View>
     </View>
     <View style={styles.container}>
       <View style={styles.box}>
-        <Button title="patty" onPress={() => {this.setState({Theme: "PattyTheme"}); console.log(this.state);}} />
+        <Button color="#999966"  title="patty" onPress={() => {this.setState({Theme: "PattyTheme"}); console.log(this.state);}} />
       </View>
     </View>
     <View style={styles.container}>
       <View style={styles.box}>
-        <Button title="halloween" onPress={() => {this.setState({Theme: "HalloweenTheme"}); console.log(this.state);}} />   
+        <Button color="#5d48b4"  title="halloween" onPress={() => {this.setState({Theme: "HalloweenTheme"}); console.log(this.state);}} />   
       </View>
     </View>
     <View style={styles.container}>
       <View style={styles.box}>
-        <Button title="sunshine" onPress={() => {this.setState({Theme: "SunshineTheme"}); console.log(this.state);}} />  
+        <Button color="#ff0000"  title="sunshine" onPress={() => {this.setState({Theme: "SunshineTheme"}); console.log(this.state);}} />  
       </View>
     </View>
     </>
